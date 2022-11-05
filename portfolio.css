@@ -1,0 +1,340 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width: 100%;
+    height: 80vh;
+}
+.container{
+    padding: 10px 10%;
+    color: white;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin: 20px 20px;
+    list-style: none;
+}
+.fa-home{
+    color: palevioletred;
+    padding: 5px;
+    display: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    height: 3px;
+    width:0;
+    background:  rgb(218, 39, 98);;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: .5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.span{
+    color: palevioletred;
+}
+.text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.text h1{
+    font-size: 60px;
+    margin-top: 20px;
+   
+}
+#about{
+    padding: 80px 0;
+    color: black;
+}
+.about-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.row-1{
+    flex-basis: 35%;
+}
+.row-1 img{
+    width: 100%;
+    height: 30em;
+    border-radius: 15px;
+}
+.row-2{
+    flex-basis: 60%;
+}
+.row-2 p{
+    font-size: 25px;
+}
+.about-me-text{
+    font-size: 60px;
+    color: white;
+}
+.about-subtitles{
+    display: flex;
+    margin: 20px 0 20px;
+}
+.subtitles-links{
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+}
+.active-link::after{
+    content: '';
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background: palevioletred;
+    bottom: -3px;
+    left: 0;
+}
+.subtitles-content{
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+.subtitles-content ul{
+    list-style: none;    
+}
+.about-subtitles:hover + .subtitles-content{
+    display: block;
+} 
+.subtitles-content ul li{
+    padding: 10px 0;
+    
+}
+.subtitles-content ul li span{
+    color: palevioletred;
+    
+}
+nav .fas{
+    display: none;
+}
+#service{
+   padding: 30px 0;
+}
+.service-offered{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
+    grid-gap:10px ;
+    margin-top: 20px;
+}
+.service-offered div{
+    padding: 20px;
+    background: rgb(22, 19, 19);
+    border-right: 20px ;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.service-offered div .fas,.fab{
+    font-size: 50px;
+    padding: 20px;
+}
+.service-offered div:hover{
+    background: palevioletred;
+    transform: translateY(-10px);
+}
+.service-offered div h2{
+    margin: 5px 0;
+}
+.service-offered div p{
+    font-size: 20px;
+}
+#my-work{
+    padding: 20px 0;
+}
+.work{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
+    grid-gap: 2em;
+    padding: 20px;
+}
+.work div{
+    background: rgb(31, 26, 28);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    
+}
+.work div p{
+    font-size: 20px;
+}
+
+.work div img{
+    width: 100px;
+    padding: 0;
+    z-index: -1;
+    position: absolute;
+   
+}
+#contacts{
+    padding: 20px 0;
+}
+.mycontact{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+.mycontact div .fas{
+    color: palevioletred;
+    padding: 5px;
+}
+.mycontact div .fab{
+    color: palevioletred;
+    cursor: pointer;
+    font-size: 20px;
+}
+.comments form{
+    display: flex;
+    flex-direction: column;
+}
+.comments form input{
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 10px 0;
+    background: black;
+    color: white;
+}
+.comments form textarea{
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+.comments form button{
+    width: 5em;
+    margin: 10px;
+    padding: 10px;
+    background: palevioletred;
+    border-radius: 1em;
+}
+@media all and (max-width:280px) {
+    .text p{
+        font-size: 5px;
+    }
+    .text h1{
+        font-size: 5px;
+    }
+    .text .span{
+        font-size: 5px;
+    }
+    .about-row{
+        margin-top: 5em;
+    }
+    .mycontact{
+        flex-direction: column;
+    }
+}
+@media all and (max-width:390px) {
+    .text p{
+        font-size: 20px;
+    }
+    .text h1{
+        font-size: 10px;
+    }
+    .text .span{
+        font-size: 10px;
+    }
+    .about-row{
+        margin-top: 5em;
+    }
+    .mycontact{
+        flex-direction: column;
+    }
+}
+@media all and (max-width:730px) {
+    #header{
+        height: 50vh;
+    }
+    nav ul{
+        right: -200px;
+        background: palevioletred;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        position: fixed;
+        transition:right 1s;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        padding: 25px 0px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+    }
+    nav .fas{
+        display: block;
+        font-size: 40px;
+    }
+    .logo{
+        width: 9em;
+        height: 5em;
+    }
+    .text p{
+        font-size: 30px;
+    }
+    .text h1{
+        font-size: 50px;
+    }
+    .text .span{
+        font-size: 50px;
+    }
+    .about-row{
+        flex-direction: column;
+    }
+    .row-1 img{
+        height: 400px;
+    }
+    .row-2 p{
+        font-size: 20px;
+    }
+    .mycontact{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
