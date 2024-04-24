@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 body{
-    background: black;
+    background: rgb(202, 207, 202);
 }
 html{
     scroll-behavior: smooth;
@@ -22,7 +22,6 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    
 }
 nav ul li{
     display: inline-block;
@@ -57,8 +56,9 @@ nav ul li a:hover::after{
     color: palevioletred;
 }
 .text{
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 30px;
+    color: black;
 }
 .text h1{
     font-size: 60px;
@@ -84,6 +84,7 @@ nav ul li a:hover::after{
 }
 .row-2{
     flex-basis: 60%;
+    color: black;
 }
 .row-2 p{
     font-size: 25px;
@@ -91,6 +92,8 @@ nav ul li a:hover::after{
 .about-me-text{
     font-size: 60px;
     color: white;
+    color: black;
+
 }
 .about-subtitles{
     display: flex;
@@ -119,16 +122,23 @@ nav ul li a:hover::after{
 .subtitles-content ul{
     list-style: none;    
 }
-.about-subtitles:hover + .subtitles-content{
+/* .about-subtitles:hover + .subtitles-content{
     display: block;
-} 
+}  */
 .subtitles-content ul li{
     padding: 10px 0;
     
 }
 .subtitles-content ul li span{
-    color: palevioletred;
+    color: rgb(15, 14, 14);
     
+}
+.subtitles-content ul li span i{
+    color: rgb(15, 14, 14);
+    font-size: 20px;
+}
+.fal{
+    padding-left: 10px;
 }
 nav .fas{
     display: none;
@@ -159,6 +169,7 @@ nav .fas{
 }
 .service-offered div h2{
     margin: 5px 0;
+    
 }
 .service-offered div p{
     font-size: 20px;
@@ -172,23 +183,34 @@ nav .fas{
     grid-gap: 2em;
     padding: 20px;
 }
-.work div{
+.divWork{
     background: rgb(31, 26, 28);
     border-radius: 10px;
     padding: 20px;
-    position: relative;
-    
 }
 .work div p{
     font-size: 20px;
 }
 
 .work div img{
-    width: 100px;
+    width: 100%;
     padding: 0;
-    z-index: -1;
-    position: absolute;
-   
+    z-index: 1;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.btn{
+    color: white;
+    background: blue;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 12px;
 }
 #contacts{
     padding: 20px 0;
@@ -209,28 +231,8 @@ nav .fas{
     cursor: pointer;
     font-size: 20px;
 }
-.comments form{
-    display: flex;
-    flex-direction: column;
-}
-.comments form input{
-    margin: 10px 0;
-    border-radius: 5px;
-    padding: 10px 0;
-    background: black;
-    color: white;
-}
-.comments form textarea{
-    background: black;
-    color: white;
-    border-radius: 5px;
-}
-.comments form button{
-    width: 5em;
-    margin: 10px;
-    padding: 10px;
-    background: palevioletred;
-    border-radius: 1em;
+.mycontact p {
+    color: black;
 }
 @media all and (max-width:280px) {
     .text p{
@@ -248,6 +250,9 @@ nav .fas{
     .mycontact{
         flex-direction: column;
     }
+    .buttons{
+        gap: 5px;
+    }
 }
 @media all and (max-width:390px) {
     .text p{
@@ -264,6 +269,9 @@ nav .fas{
     }
     .mycontact{
         flex-direction: column;
+    }
+    .buttons{
+        gap: 10px;
     }
 }
 @media all and (max-width:730px) {
@@ -322,6 +330,9 @@ nav .fas{
     }
     .mycontact{
         flex-direction: column;
+    }
+    .buttons{
+        gap: 10px;
     }
 }
 
