@@ -20,8 +20,11 @@ html{
 nav{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
+    position: sticky;
+ 
+    
 }
 nav ul li{
     display: inline-block;
@@ -207,7 +210,7 @@ nav .fas{
 }
 .btn{
     color: white;
-    background: blue;
+    background: rgb(69, 69, 72);
     text-decoration: none;
     padding: 5px;
     border-radius: 12px;
@@ -278,9 +281,12 @@ nav .fas{
     #header{
         height: 50vh;
     }
+    nav{
+        justify-content: right;
+    }
     nav ul{
         right: -200px;
-        background: palevioletred;
+        background: rgb(207, 195, 199);
         top: 0;
         width: 200px;
         height: 100vh;
@@ -295,6 +301,7 @@ nav .fas{
     }
     nav ul li a{
         font-size: 20px;
+        color: black;
     }
     nav ul .fas{
         position: absolute;
@@ -305,6 +312,7 @@ nav .fas{
     nav .fas{
         display: block;
         font-size: 40px;
+        color: black;
     }
     .logo{
         width: 9em;
