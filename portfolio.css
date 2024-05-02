@@ -20,19 +20,26 @@ html{
 .cv-container{
     position: relative;
 }
+
 .cv{
     position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-right: 10px;
+    left: 20em;
+    top: 10px;
     padding: 10px;
     border-radius: 12px;
-    background-color: rgb(143, 143, 147);
+    background-color: palevioletred;
     font-size: 15px;
 }
 .cv a{
     text-decoration: none;
-    color: white;
+    color: black;
+}
+.cv:hover{
+    background-color: white;
+    color: black;
+}
+.cv a:hover{
+    color: black;
 }
 nav{
     display: flex;
